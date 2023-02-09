@@ -1,0 +1,16 @@
+main {
+    background-color: antiquewhite
+
+}
+
+p { 
+    background-color: green;
+    border: 20px black dashed;
+    padding: 4vw;
+    margin: 40px;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
