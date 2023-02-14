@@ -1,0 +1,27 @@
+main {
+    background-color: antiquewhite
+
+}
+
+p { 
+    background-color: lightskyblue;
+    border: 1px solid #999;
+    padding: 50px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 550px;
+    max-height: 500px;
+}
+
