@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Relative positioning</title>
+    <title>Way of Seeing</title>
 
     <style>
       body {
-        width: 500px;
-        margin: 0 auto;
+        width: 800px;
+        top: 40px;
+        margin: 0;
         position: relative;
+        font-size: 21px;
       }
 
       p {
         background: aqua;
-        border: 3px solid blue;
+        border: 3px dotted rebeccapurple;
         padding: 10px;
         margin: 10px;
       }
@@ -23,37 +25,65 @@
         background: red;
         border: 1px solid black;
       }
-
-      .positioned {
+      #special {
+        position: absolute;
+        background: greenyellow;
+        top: 140px;
+        right: 380px
+      }
+      #special2 {
         position: absolute;
         background: yellow;
-        top: 0px;
-        left: 0px;
+        top: 150px;
+        left: 300px;
+      }
+      .positioned {
+        position: absolute;
+        background: lightpink;
+        top: 500px;
+        left: 140px;
         right: 0px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+
+      body {
+        width: 600px;
+        height: 1400 px;
+        margin: 0 auto;
+
+      }
+
+      h1 {
+        position: fixed;
+        top: 0px;
+        width: 500px;
+        margin-top: 0;
+        background: white;
+        padding: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
       }
 
       p:nth-of-type(1) {
-        position: absolute;
-        background: lime;
-        top: 10px;
-        right: 30px;
-        z-index: 1;
+        margin-top: 60px;
+
       }
 
 
+   
     </style>
   </head>
   <body>
-    <h1>Relative positioning</h1>
+    <h1>Ways of Seeing</h1>
 
-    <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+    <p> Art is for <span>everyone</span> and not only for the privileged. The variety of interpretations of artwork makes it more enjoyable and enticing to look at. </p>
 
-    <p class="positioned">By default we span 100% of the width of our parent element, and our are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+    <p class="positioned"> John Berger was really ahead of time. It's impressive that he was able to think inclusively and present an unbiased opinion to the public on seemingly controversial topics such as sexuality and gender stereotypes.</p>
 
-    <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+    <p id="special"> When he talked about the silence of paintings and he took a pause to demonstrate that silence, it was kind of creepy. Especially with the figures staring back at you. He says the stillness of the painting can be striking</p>
 
-    <p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg" alt="a wide but short section of a photo of several fabrics"></p>
+    <p id="special2"> Paintings are often overlooked for their meanings. Looking at the core or zooming in can help identify those underlying meanings. Perspectives of the paintings can also alter their meanings. For example, if you look at a painting horizontally from left to right, it can become a landscape image</p>
 
   </body>
 </html>
