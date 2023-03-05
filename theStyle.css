@@ -1,6 +1,11 @@
 main {
     background-color: antiquewhite
-
+}
+header {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: 2px dotted brown;
 }
 
 p { 
@@ -8,9 +13,101 @@ p {
     border: 20px black dashed;
     padding: 4vw;
     margin: 40px;
-
     font-family: 'Courier New', Courier, monospace;
 }
 
 
+.button {
+    padding: 16px 32px;
+    font-size: 23px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button1 {
+    background-color: white; 
+    border: 2px solid lightgreen;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+}
+
+.button1:hover {
+    background-color: lightgreen;
+    color: white;
+    border: 1px solid lightgreen;
+  }
+
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  } 
+
+.button2 {
+    padding: 16px 32px;
+    font-size: 23px;
+    margin: 4px 2px;
+    background-color: red;
+    position: absolute;
+    animation-name: simple;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    margin: auto;
+}
+
+  @keyframes simple {
+    0%   {background-color:red; left:0px; top:600px;}
+    50%  {background-color:yellow; left:1200px; top:400px;}
+    75%  {background-color:cyan; left: 650px; top:500px}
+    100%  {background-color:red; left:0px; top:600px;}
+    
+  }
+
+.button3 {
+    background-color: white; 
+    border: 2px solid lightgreen;
+    position: absolute;
+    top: 290px;
+    left: 40px;
+    padding: 16px 32px;
+    font-size: 23px;
+    margin: 4px 2px;
+}
+
+.button4 {
+    background-color: white; 
+    border: 2px solid lightgreen;
+    position: absolute;
+    top: 380px;
+    left: 40px;
+    padding: 16px 32px;
+    font-size: 23px;
+    margin: 4px 2px;
+}
+
+.button5 {
+    background-color: white; 
+    border: 2px solid lightgreen;
+    position: absolute;
+    top: 470px;
+    left: 40px;
+    padding: 16px 32px;
+    font-size: 23px;
+    margin: 4px 2px;
+}
 
