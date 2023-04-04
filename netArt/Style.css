@@ -5,24 +5,38 @@ body {
   color: white;
 }
 
-main {
+.flexbox {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 20px;
   height: 800px;
   flex-wrap: wrap;
   margin: auto;
+  width: 300px;
+  height: 180px;
+
+  /* border-radius: 10px; */
   /* width: 1000px; */
 }
 
-div {
+.flex {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* .flex2 {
+  align-self: baseline;
+} */
+/* div {
   font-size: large;
   border: 2px white solid;
   padding: 20px 20px;
   width: 200px;
   height: 180px;
-}
+  border-radius: 10px;
+} */
 
 p {
   border: white;
@@ -42,6 +56,8 @@ p {
 img {
   max-width: 800px;
   max-height: 800px;
+  /* position: absolute;
+  top: 500px; */
 }
 
 .text2 {
@@ -108,7 +124,6 @@ backbutton {
   top: 20px;
   left: 50px;
   border: 2px solid white;
-  color: red;
 }
 
 @media screen and (max-width: 600px) {
@@ -123,3 +138,36 @@ backbutton {
     flex: 1;
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 100px 300px 100px;
+  justify-content: center;
+  align-content: center;
+  /* grid-gap: 20px; */
+  /* grid-template-areas:
+    "header" "header"
+    "main aside"
+    "footer footer"; */
+  /* outline: 2px solid white; */
+  width: 80vw;
+  height: 60vw;
+  margin: auto;
+  gap: 40px;
+}
+
+/* .one {
+  grid-area: header;
+}
+
+.two {
+  grid-area: main;
+}
+
+three {
+  grid-area: aside;
+}
+.grid-item-4 {
+  grid-area: footer;
+} */
