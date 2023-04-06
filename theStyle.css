@@ -67,6 +67,7 @@ a:active {
   animation-duration: 20s;
   animation-iteration-count: infinite;
   margin: auto;
+  z-index: 1;
 }
 
 @keyframes simple {
@@ -134,4 +135,20 @@ a:active {
   padding: 70px 88px;
   margin-top: 80px;
   text-decoration-style: wavy;
+}
+
+img {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: 800px;
+  top: 200px;
+  box-shadow: 10px 10px lightblue;
+}
+
+.bio {
+  border: 2px solid black;
+  padding: 10px 10px;
+  margin: 4px 2px;
+  background-color: white;
 }
