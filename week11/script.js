@@ -1,5 +1,6 @@
 let typedText = document.getElementById("typed-text");
-const textToType = "Breaking News!"; // The text to be typed
+const textToType =
+  "Breaking News! Breaking News! breaking News! reaking Bews! breaking news?"; // The text to be typed
 
 let i = 0; // Initialize index to 0
 
