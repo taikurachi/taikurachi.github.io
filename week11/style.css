@@ -85,7 +85,6 @@ body {
   height: 300px;
   width: 1050px;
   grid-template-rows: 400px;
-
   grid-template-columns: 1fr 1fr;
   row-gap: 5px;
   column-gap: 20px;

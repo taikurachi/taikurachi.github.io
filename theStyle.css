@@ -7,31 +7,43 @@ header {
   text-align: center;
   border: 2px dotted brown;
 }
-
+/* 
 p {
   background-color: green;
   border: 20px black dashed;
   padding: 4vw;
   margin: 40px;
   font-family: "Courier New", Courier, monospace;
-}
+} */
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  /* justify-content: center;
+  align-items: center; */
+  margin: auto;
+  /* place-content: center; */
+}
 .button {
   padding: 16px 32px;
   font-size: 23px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   transition-duration: 0.3s;
   cursor: pointer;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  /* margin: auto; */
+  text-align: center;
 }
 
 .button1 {
   background-color: white;
   border: 2px solid lightgreen;
-  position: absolute;
+  /* position: absolute;
   top: 200px;
-  left: 40px;
+  left: 40px; */
 }
 
 .button1:hover {
@@ -62,14 +74,11 @@ a:active {
   font-size: 23px;
   margin: 4px 2px;
   background-color: red;
-  position: absolute;
-  animation-name: simple;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  margin: auto;
+  /* position: absolute; */
+  /* margin: auto; */
   z-index: 1;
 }
-
+/* 
 @keyframes simple {
   0% {
     background-color: red;
@@ -91,14 +100,14 @@ a:active {
     left: 0px;
     top: 600px;
   }
-}
+} */
 
 .button3 {
   background-color: white;
   border: 2px solid lightgreen;
-  position: absolute;
-  top: 290px;
-  left: 40px;
+  /* position: absolute; */
+  /* top: 290px;
+  left: 40px; */
   padding: 16px 32px;
   font-size: 23px;
   margin: 4px 2px;
@@ -107,9 +116,9 @@ a:active {
 .button4 {
   background-color: white;
   border: 2px solid lightgreen;
-  position: absolute;
-  top: 380px;
-  left: 40px;
+  /* position: absolute; */
+  /* top: 380px;
+  left: 40px; */
   padding: 16px 32px;
   font-size: 23px;
   margin: 4px 2px;
@@ -118,9 +127,9 @@ a:active {
 .button5 {
   background-color: white;
   border: 2px solid lightgreen;
-  position: absolute;
+  /* position: absolute;
   top: 470px;
-  left: 40px;
+  left: 40px; */
   padding: 16px 32px;
   font-size: 23px;
   margin: 4px 2px;
@@ -129,9 +138,9 @@ a:active {
 .text1 {
   background-color: white;
   border: 2px solid black;
-  position: absolute;
+  /* position: absolute;
   left: 600px;
-  top: 500px;
+  top: 500px; */
   padding: 70px 88px;
   margin-top: 80px;
   text-decoration-style: wavy;
@@ -140,9 +149,9 @@ a:active {
 img {
   width: 400px;
   height: 600px;
-  position: absolute;
+  /* position: absolute;
   left: 800px;
-  top: 200px;
+  top: 200px; */
   box-shadow: 10px 10px 5px lightblue;
 }
 
