@@ -1,27 +1,13 @@
-let colorWords = ["red", "blue", "green", "yellow", "orange", "purple", "pink"];
-let randomIndex = Math.floor(Math.random() * colorWords.length);
-let colorWord = colorWords[randomIndex];
-let heading = document.querySelector("h1");
-heading.textContent = "Type the color word: " + colorWord;
-let input = document.createElement("input");
-document.body.appendChild(input);
+document
+  .getElementById("color-input")
+  .addEventListener("keyup", function (event) {
+    //listens for when key is released
 
-input.addEventListener("keyup", function (event) {
-  let typedWord = event.target.value.toLowerCase();
+    if (event.key === "Enter") {
+      changeBackgroundColor(this.value); //changes bg color if enter is released
+    }
+  });
 
-  // Check if the typed word matches the color word
-  if (typedWord === colorWord) {
-    console.log(input);
-    // Update the background color
-    let background = document.querySelector("#background");
-    document.body.style.backgroundColor = colorWord;
-
-    // Generate a new random color word
-    randomIndex = Math.floor(Math.random() * colorWords.length);
-    colorWord = colorWords[randomIndex];
-    heading.textContent = "Type the color word: " + colorWord;
-
-    // Clear the input field
-    input.value = "";
-  }
-});
+function changeBackgroundColor(color) {
+  document.body.style.backgroundColor = color; //applies color to the body element
+}
