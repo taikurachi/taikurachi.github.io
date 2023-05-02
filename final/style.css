@@ -1,19 +1,114 @@
 body {
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s;
-}
-
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   height: 100vh;
-  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  transition: background-color 3s ease-in-out;
+}
+.color-name {
+  position: absolute;
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  pointer-events: none;
+  animation: color-grow 5s linear 1;
+  z-index: 1;
 }
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.color-name-inner {
+  display: inline-block;
+  animation: color-grow 5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-grow {
+  0% {
+    font-size: 14px;
+  }
+  100% {
+    font-size: 160px;
+  }
+}
+
+.splotch {
+  position: absolute;
+  background-color: inherit;
+  border-radius: 50%;
+  animation: splotch-animation 1s forwards;
+  overflow: hidden;
+  width: var(--splotch-size);
+  height: var(--splotch-size);
+  opacity: 50%;
+}
+
+/* Add this block */
+.splotch:before,
+.splotch:after {
+  position: absolute;
+  border-radius: 50%;
+  background-color: inherit;
+  content: "";
+}
+
+.splotch:before {
+  width: 100%;
+  height: 100%;
+}
+
+.splotch:after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes splotch-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Drip effect
+.drip {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  border-radius: 50%;
+  animation: drip 3s linear infinite;
+}
+
+@keyframes drip {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+} */
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: red;
+  z-index: 1;
+}
+
+.directions {
+  border: 2px solid black;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px;
+  opacity: 50%;
+  background-color: white;
 }
