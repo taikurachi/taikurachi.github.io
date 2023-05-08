@@ -139,6 +139,8 @@ function createRandomColorElement() {
   colorElement.id = "color-" + color;
 
   function scheduleColorElementRemoval(colorElement, delay) {
+    let creationTime = new Date().getTime();
+
     setTimeout(function () {
       if (document.getElementById("color-" + color)) {
         let colorElement = document.getElementById("color-" + color);
@@ -146,20 +148,23 @@ function createRandomColorElement() {
 
         // Check if the element is visible within the viewport
         let isVisible =
-          elementRect.top >= 0 &&
-          elementRect.left >= 0 &&
-          elementRect.bottom <= window.innerHeight &&
-          elementRect.right <= window.innerWidth;
+          elementRect.top >= -elementRect.height / 2 &&
+          elementRect.left >= -elementRect.width / 2 &&
+          elementRect.bottom <= window.innerHeight + elementRect.height / 2 &&
+          elementRect.right <= window.innerWidth + elementRect.width / 2;
 
-        removeColorElement(colorElement.id.split("-")[1]);
+        let currentTime = new Date().getTime();
+        let timeOnScreen = currentTime - creationTime;
 
-        if (isVisible && !hasGameOverBeenCalled) {
+        if (isVisible && timeOnScreen > 10000 && !hasGameOverBeenCalled) {
           typeGameOver();
           gameOver(color);
           hasGameOverBeenCalled = true;
+        } else {
+          removeColorElement(colorElement.id.split("-")[1]);
         }
       }
-    }, delay); // 10 seconds delay
+    }, delay);
   }
 }
 
