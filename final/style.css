@@ -174,3 +174,58 @@ button:hover {
 .hidden {
   display: none;
 }
+
+/* .container {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+} */
+
+.item {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 80px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.changeColor {
+  background-color: ivory;
+}
+
+#startGame {
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 25px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+  z-index: 1;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.hovering:hover {
+  background-color: #45a049;
+}
+
+img {
+  opacity: 25%;
+  z-index: 0;
+  width: 100%;
+  /* height: 100%; */
+}
