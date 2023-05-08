@@ -108,6 +108,12 @@ function gameOver(color) {
   gameOverTriggered = true;
   clearInterval(colorSpawnInterval); // Add this line
   document.body.style.backgroundColor = color;
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+    let highScoreElement = document.getElementById("highScore");
+    highScoreElement.textContent = "High Score: " + highScore;
+  }
 }
 
 // Function to create a random color element on the screen
@@ -308,4 +314,14 @@ function getSpawnInterval() {
   let newInterval =
     baseInterval - Math.floor(timePlayed / intervalDecrease) * 30;
   return Math.max(newInterval, minimumInterval);
+}
+
+// Initialize a variable to store the high score
+let highScore = 0;
+
+// Load the high score from localStorage (if it exists)
+if (localStorage.getItem("highScore")) {
+  highScore = parseInt(localStorage.getItem("highScore"));
+  let highScoreElement = document.getElementById("highScore");
+  highScoreElement.textContent = "High Score: " + highScore;
 }

@@ -125,7 +125,7 @@ body {
   background-color: white;
 }
 
-.scoreContainer {
+#scoreboard {
   position: absolute;
   top: 2%;
   left: 2%;
@@ -146,7 +146,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-button {
+#playAgainButton {
   font-size: 24px;
   position: absolute;
   top: 68%;
@@ -167,7 +167,7 @@ button {
     "Lucida Sans", Arial, sans-serif;
 }
 
-button:hover {
+#playAgainButton:hover {
   background-color: #45a049;
 }
 
@@ -192,17 +192,18 @@ button:hover {
   font-size: 80px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
+  -webkit-text-stroke: 3px white;
 }
 
 .changeColor {
-  background-color: ivory;
+  background-color: lightblue;
 }
 
 #startGame {
   font-size: 70px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 25px 25px;
@@ -219,20 +220,36 @@ button:hover {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.hovering:hover {
+#startGame:hover {
   background-color: #45a049;
-}
-
-img {
-  opacity: 25%;
-  z-index: 0;
-  width: 100%;
-  /* height: 100%; */
 }
 
 .item3 {
   position: absolute;
-  top: 40%;
+  color: lightcoral;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  animation: increaseTextSize 5s linear infinite;
+}
+
+@keyframes increaseTextSize {
+  0% {
+    font-size: 30px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+
+#highScore {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
