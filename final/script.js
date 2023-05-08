@@ -55,9 +55,7 @@ let colors = [
 let typedString = "";
 let score = 0;
 
-// Initialize variables for game state management
-
-let gameOverTriggered = false;
+let gameOverTriggered = false; //set up flag for game over
 let colorSpawnInterval;
 
 // Function to increment the score and update the score display
@@ -70,9 +68,9 @@ function incrementScore() {
   let scoreElement = document.getElementById("score");
   scoreElement.textContent = score; //update score display
   if (score >= 2) {
-    clearInterval(colorSpawnInterval);
+    clearInterval(colorSpawnInterval); //clear interval for spawning
     intervalDecider = getSpawnInterval();
-    colorSpawnInterval = setInterval(createRandomColorElement, intervalDecider);
+    colorSpawnInterval = setInterval(createRandomColorElement, intervalDecider); //new interval
     console.log(intervalDecider);
   }
 }
@@ -106,13 +104,13 @@ let hasGameOverBeenCalled = false;
 // Function to end the game and stop spawning colors
 function gameOver(color) {
   gameOverTriggered = true;
-  clearInterval(colorSpawnInterval); // Add this line
+  clearInterval(colorSpawnInterval); //
   document.body.style.backgroundColor = color;
   if (score > highScore) {
     highScore = score;
-    localStorage.setItem("highScore", highScore);
+    localStorage.setItem("highScore", highScore); //high score storage
     let highScoreElement = document.getElementById("highScore");
-    highScoreElement.textContent = "High Score: " + highScore;
+    highScoreElement.textContent = "High Score: " + highScore; //updating high score element
   }
 }
 
@@ -232,7 +230,7 @@ function removeColorElement(color) {
 document
   .getElementById("colorInput")
   .addEventListener("input", function (event) {
-    typedString = event.target.value.toLowerCase();
+    typedString = event.target.value.toLowerCase(); //typing into the input box instead of randomly typing onto the screen
 
     colors.forEach(function (color) {
       if (typedString.endsWith(color)) {
@@ -265,7 +263,7 @@ let intervalDecider = 2000;
 function intervalTimer() {
   colorSpawnInterval = setInterval(function () {
     createRandomColorElement();
-  }, intervalDecider); // Add this line
+  }, intervalDecider);
 }
 
 intervalTimer();
@@ -273,22 +271,32 @@ intervalTimer();
 let colorElements = [];
 
 function updateColorElementPositions() {
+  //iterate through each color element
   colorElements.forEach((colorElement) => {
+    // Get the current X and Y position of the color element
+
     let currentX = parseFloat(colorElement.style.left);
     let currentY = parseFloat(colorElement.style.top);
+
+    // Calculate the new X and Y positions of the color element
+
     let newX = currentX + colorElement.velocityX;
     let newY = currentY + colorElement.velocityY;
+
+    //get the dimensions of the color element
     let elementWidth = colorElement.offsetWidth;
     let elementHeight = colorElement.offsetHeight;
 
-    // Check for collisions with the viewport boundaries
+    // Check for collisions with the viewport boundaries along x-axis
     if (newX < 0 || newX + elementWidth > window.innerWidth) {
-      colorElement.velocityX = -colorElement.velocityX;
-      newX = Math.min(Math.max(newX, 0), window.innerWidth - elementWidth);
+      colorElement.velocityX = -colorElement.velocityX; //reverse x velocity
+      newX = Math.min(Math.max(newX, 0), window.innerWidth - elementWidth); //limit the x position to be within the viewport
     }
+
+    //check for collisions with the viewport boundaries along y-axis
     if (newY < 0 || newY + elementHeight > window.innerHeight) {
-      colorElement.velocityY = -colorElement.velocityY;
-      newY = Math.min(Math.max(newY, 0), window.innerHeight - elementHeight);
+      colorElement.velocityY = -colorElement.velocityY; //reverse y velocity
+      newY = Math.min(Math.max(newY, 0), window.innerHeight - elementHeight); //limit the new y position to be within the viewport
     }
 
     // Update the element's position
@@ -304,15 +312,15 @@ function updateColorElementPositions() {
 updateColorElementPositions();
 
 let startTime = new Date().getTime();
-
+//creating faster spawn intervals to make the game harder
 function getSpawnInterval() {
   let baseInterval = 2000;
   let intervalDecrease = 1000;
-  let minimumInterval = 1000;
+  let minimumInterval = 900;
   let timePlayed = new Date().getTime() - startTime;
 
   let newInterval =
-    baseInterval - Math.floor(timePlayed / intervalDecrease) * 30;
+    baseInterval - Math.floor(timePlayed / intervalDecrease) * 30; // game becomes harder the longer you play
   return Math.max(newInterval, minimumInterval);
 }
 
