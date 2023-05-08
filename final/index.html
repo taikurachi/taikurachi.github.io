@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="scoreboard">Score: <span id="score">0</span></div>
-    <div class="directions">
-      How to Play: Type the color before it gets too big
+    <div class="scoreContainer">
+      <div id="scoreboard">Score: <span id="score">0</span></div>
     </div>
+    <input
+      type="text"
+      id="colorInput"
+      placeholder="Type the color name"
+      autofocus
+    />
+
     <div class="gameOver"></div>
 
     <script src="script.js"></script>
