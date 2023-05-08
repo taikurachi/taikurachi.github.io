@@ -92,6 +92,9 @@ function typeGameOver() {
     if (i === endText.length) {
       clearInterval(intervalId); // Stop the interval when all letters have been typed
       console.log("done typing");
+      let buttonGameOver = document.querySelector(".hidden");
+      buttonGameOver.classList.remove("hidden");
+      console.log(buttonGameOver);
     }
   }
 }
