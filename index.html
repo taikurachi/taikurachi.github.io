@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Taisei's Great Website</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="theStyle.css" rel="stylesheet" />
+    <title>Taisei Kurachi Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="theStyle.css" />
   </head>
-
   <body>
-    <header>Taisei's Great Website</header>
+    <div id="navbar">
+      <ul>
+        <li>
+          <a href="#about"><i class="fas fa-user"></i></a>
+        </li>
+        <li>
+          <a href="#work"><i class="fas fa-briefcase"></i></a>
+        </li>
+        <li>
+          <a href="#contact"><i class="fas fa-envelope"></i></a>
+        </li>
+      </ul>
+    </div>
 
-    <main>
-      <div class="container">
-        <div class="button button1">
-          <a href="week1/homework.html">week 1</a>
-        </div>
-
-        <div class="button2"><a href="week2/blank.html">week 2</a></div>
-
-        <div class="button3"><a href="week3/berger.html">week 3</a></div>
-
-        <div class="button4">
-          <a href="classwork/group.html">Ways of Seeing Partner Activity</a>
-        </div>
-
-        <div class="button5">
-          <a href="http://kaiabkr.github.io/Week5/index.html"
-            >Personal Effects Partner Activity</a
-          >
-        </div>
-
-        <img src="images/mediaday.JPEG" alt="" />
-        <!-- <div class="bio">Hello, my name is Taisei</div> -->
+    <img src="images/mediaday.JPEG" alt="Your image" id="profile-pic" />
+    <div id="content">
+      <div id="about">
+        <h1>Hi, I am Taisei Kurachi</h1>
+        <p>I love designing and creating things.</p>
       </div>
-    </main>
+      <div id="work"></div>
+      <div id="contact"></div>
+    </div>
   </body>
 </html>
