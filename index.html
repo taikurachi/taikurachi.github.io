@@ -8,32 +8,46 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="theStyle.css" />
   </head>
-  <body>
-    <div id="navbar">
-      <ul>
-        <li>
-          <a href="#about"><i class="fas fa-user"></i></a>
-        </li>
-        <li>
-          <a href="#work"><i class="fas fa-briefcase"></i></a>
-        </li>
-        <li>
-          <a href="#contact"><i class="fas fa-envelope"></i></a>
-        </li>
-      </ul>
-    </div>
-
-    <img src="images/mediaday.JPEG" alt="Your image" id="profile-pic" />
-    <div id="content">
-      <div id="about">
-        <h1>Hi, I am Taisei Kurachi</h1>
-        <p>I love designing and creating things.</p>
+  <body class="main-content">
+    <header class="section sec1 header active"></header>
+    <main>
+      <section class="section sec2 about"></section>
+      <section class="section sec3 portfolio"></section>
+      <section class="section sec4 blogs"></section>
+      <section class="section sec5 contact"></section>
+    </main>
+    <div class="controls">
+      <div class="control control-1 active-btn">
+        <i class="fa-solid fa-house-chimney"></i>
       </div>
-      <div id="work"></div>
-      <div id="contact"></div>
+      <div class="control control-2">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="control control-3">
+        <i class="fa-regular fa-file"></i>
+      </div>
+
+      <div class="control control-4">
+        <i class="fa-regular fa-address-book"></i>
+      </div>
     </div>
   </body>
+  <script src="app.js
+  "></script>
 </html>
