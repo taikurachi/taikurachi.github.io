@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "DINNextW01-CondensedUlt";
+  src: url(https://gmb.io/wp-content/themes/gmb/fonts/d544417b-3dbf-4d66-9f4c-cc1264548542.woff2)
+      format("woff2"),
+    url(fonts/02c54ffd-ffe5-4a1d-baf3-6f2f329e985e.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Next W01 Regular";
+  src: url(https://gmb.io/wp-content/themes/gmb/fonts/44e7b0fa-6c8d-43c2-b19e-f1e3ce9ea57c.woff2)
+      format("woff2"),
+    url(c5a7f89e-15b6-49a9-8259-5ea665e72191.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Next W01 Bold";
+  src: url(https://gmb.io/wp-content/themes/gmb/fonts/121784c1-863c-4e49-b682-625ea7de55b0.woff2)
+      format("woff2"),
+    url(9949035f-6226-4080-a14a-bf7d94ffb1e1.woff) format("woff");
+  font-display: swap;
+}
+
+body {
+  font-family: "DIN Next W01 Regular";
+}
+.navbar {
+  background: #28b1de;
+}
+#docsSearch {
+  background: linear-gradient(
+    35deg,
+    rgba(216, 65, 129, 0.5) 16%,
+    rgba(14, 160, 195, 0.5) 64%
+  );
+}
+#docsSearch h1 {
+  font-family: "DIN Next W01 Bold";
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+#searchBar button {
+  font-family: "DIN Next W01 Regular";
+  background-color: #28b1de;
+}
+
+#collection-592 {
+  font-family: "DINNextW01-CondensedUlt";
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+#docsSearch #searchBar {
+  font-family: "DIN Next W01 Regular";
+}
+
+.search-query {
+  font-family: "DIN Next W01 Regular";
+}

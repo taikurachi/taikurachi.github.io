@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+.hi {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hiTextContainer {
+  flex: 3;
+}
+
+.hiImageContainer {
+  flex: 1;
+}
+
+.hiImage {
+  width: 100%;
+}
+
+.textHi {
+  font-size: 60vw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.nameContainer {
+  height: 100vh;
+  background: rebeccapurple;
+}
+
+.name {
+  font-size: 22vw;
+  cursor: default;
+  line-height: 100vh;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.name::before {
+  content: "I'm";
+  font-size: 6rem;
+  line-height: 120vh;
+  color: white;
+  text-decoration: underline;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.firstJob {
+  background: black;
+  color: white;
+}
+
+.secondJob {
+  background: rebeccapurple;
+}
+
+.jobTitle {
+  font-size: 10vw;
+  font-family: "Open Sans";
+  line-height: 100vh;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 0px 100px;
+  background-color: purple;
+}
+
+.workTitle {
+  font-size: 10vw;
+}
+
+.colorTyping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 25px; */
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.fitSize {
+  width: 600px;
+}
+
+.laptop {
+  /* background-color: aqua; */
+  position: relative;
+  /* z-index: 100; */
+}
+
+.screen {
+  width: 351px;
+  /* background-color: blue; */
+  /* margin-left: 122.5px; */
+  position: absolute;
+  top: 81px;
+  left: 122px;
+}
+
+.laptopApp {
+  width: 100%;
+  height: 222px;
+}
+
+.workDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.workTitle {
+  font-size: 8vw;
+  /* white-space: nowrap; */
+}
+
+.projectDesc {
+  font-size: 1.5rem;
+}
+
+.learnMore {
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid gray;
+  color: gray;
+  position: relative;
+  overflow: hidden;
+}
+
+.learnMore::after {
+  content: "View";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: aqua;
+  transition: 1s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+
+.learnMore:hover.learnMore::after {
+  transform: translateX(100%);
+}
+
+.collegeGraphics {
+  background-color: rebeccapurple;
+  height: 100vh;
+}
+.collageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 5rem;
+  gap: 100px;
+}
+
+.collageItems {
+  /* display: flex; */
+  border: 2px solid black;
+  padding: 10px 20px;
+}

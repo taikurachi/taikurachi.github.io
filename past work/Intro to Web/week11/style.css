@@ -1,0 +1,94 @@
+#typed-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  opacity: 1;
+}
+
+#button {
+  border: 2px solid white;
+  padding: 10px 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: white;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+#button2 {
+  border: 2px solid black;
+  padding: 10px 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: black;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+body {
+  background-color: black;
+}
+
+#tv {
+  display: flex;
+  height: 110vh;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.tvImage {
+  width: 1500px;
+  height: 800px;
+}
+
+.phoneImage {
+  width: 400px;
+  height: 300px;
+}
+.item1 {
+  color: black;
+  border: 2px dotted red;
+  font-size: 24px;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* opacity: 0; */
+}
+
+.item2 {
+  color: black;
+  border: 2px dotted red;
+  /* font-size: 24px; */
+}
+.item3 {
+  color: black;
+  border: 2px solid black;
+  border: 2px dotted red;
+  font-size: 20px;
+}
+
+.item4 {
+  color: black;
+  border: 2px solid black;
+  border: 2px dotted red;
+  font-size: 20px;
+}
+.container {
+  position: absolute;
+  bottom: 330px;
+  left: 200px;
+  display: grid;
+  height: 300px;
+  width: 1050px;
+  grid-template-rows: 400px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 20px;
+  opacity: 0;
+  align-items: center;
+  text-align: center;
+}

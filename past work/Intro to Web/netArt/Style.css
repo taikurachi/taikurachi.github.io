@@ -1,0 +1,173 @@
+body {
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  color: white;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 800px;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 300px;
+  height: 180px;
+
+  /* border-radius: 10px; */
+  /* width: 1000px; */
+}
+
+.flex {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* .flex2 {
+  align-self: baseline;
+} */
+/* div {
+  font-size: large;
+  border: 2px white solid;
+  padding: 20px 20px;
+  width: 200px;
+  height: 180px;
+  border-radius: 10px;
+} */
+
+p {
+  border: white;
+  display: flex;
+  justify-content: center;
+}
+
+.text1 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 20px 20px;
+  top: 20px;
+  left: 100px;
+  color: white;
+}
+
+img {
+  max-width: 800px;
+  max-height: 800px;
+  /* position: absolute;
+  top: 500px; */
+}
+
+.text2 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 20px 20px;
+  top: 400px;
+  left: 1200px;
+  color: white;
+}
+
+.text3 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 20px 20px;
+  top: 750px;
+  left: 100px;
+  color: white;
+}
+
+.text4 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 20px 20px;
+  top: 20px;
+  left: 1300px;
+  color: white;
+}
+
+.text5 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 40px 30px;
+  top: 400px;
+  left: 1200px;
+  color: white;
+}
+
+.text6 {
+  border: 2px solid white;
+  position: absolute;
+  padding: 20px 60px;
+  top: 720px;
+  left: 1200px;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+backbutton {
+  position: absolute;
+  padding: 10px 10px;
+  top: 20px;
+  left: 50px;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div {
+    flex: 1;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 100px 300px 100px;
+  justify-content: center;
+  align-content: center;
+  /* grid-gap: 20px; */
+  /* grid-template-areas:
+    "header" "header"
+    "main aside"
+    "footer footer"; */
+  /* outline: 2px solid white; */
+  width: 80vw;
+  height: 60vw;
+  margin: auto;
+  gap: 40px;
+}
+
+/* .one {
+  grid-area: header;
+}
+
+.two {
+  grid-area: main;
+}
+
+three {
+  grid-area: aside;
+}
+.grid-item-4 {
+  grid-area: footer;
+} */
