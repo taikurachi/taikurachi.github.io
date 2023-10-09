@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "DINNextW01-CondensedUlt";
   src: url(https://gmb.io/wp-content/themes/gmb/fonts/d544417b-3dbf-4d66-9f4c-cc1264548542.woff2)
@@ -23,15 +29,34 @@
 body {
   font-family: "DIN Next W01 Regular";
 }
-.navbar {
-  background: #28b1de;
-}
+
 #docsSearch {
-  background: linear-gradient(
+  background-image: linear-gradient(
     35deg,
-    rgba(216, 65, 129, 0.5) 16%,
-    rgba(14, 160, 195, 0.5) 64%
+    rgba(216, 65, 129, 0.5),
+    rgba(70, 155, 180, 0.5),
+    rgba(180, 90, 140, 0.5),
+    rgba(150, 120, 150, 0.5),
+    rgba(110, 140, 160, 0.5),
+    rgba(60, 150, 170, 0.5),
+    rgba(180, 90, 140, 0.5)
   );
+
+  /* rgba(216, 65, 129, 0.5), 16
+  rgba(14, 160, 195, 0.5) 64 */
+
+  background-size: 300%;
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
 }
 #docsSearch h1 {
   font-family: "DIN Next W01 Bold";
@@ -56,4 +81,67 @@ body {
 
 .search-query {
   font-family: "DIN Next W01 Regular";
+}
+
+#mainNav .brand span {
+  display: inline-block;
+  text-indent: -9000px;
+  width: 75px;
+  height: 42px;
+  background: url(https://gmb.io/wp-content/themes/gmb/images/logo-white@2x.webp)
+    no-repeat 0 0;
+  background-size: 100%;
+  padding: 10px;
+}
+
+/* background images */
+#category-595 {
+  background-image: url(https://taikurachi.github.io/images/white_check_mark.png);
+}
+
+#category-596 {
+  background-image: url(https://taikurachi.github.io/images/shopping_trolley.png);
+}
+
+#category-597 {
+  background-image: url(https://taikurachi.github.io/images/bust_in_silhouette.png);
+}
+
+#category-598 {
+  background-image: url(https://taikurachi.github.io/images/mag_right.png);
+}
+
+#category-600 {
+  background-image: url(https://taikurachi.github.io/images/woman_in_lotus_position.png);
+}
+
+#category-599 {
+  background-image: url(https://taikurachi.github.io/images/handshake.png);
+}
+
+#category-603 {
+  background-image: url(https://taikurachi.github.io/images/muscle2.png);
+}
+
+#category-602 {
+  background-image: url(https://taikurachi.github.io/images/question.png);
+}
+
+#category-604 {
+  background-image: url(https://taikurachi.github.io/images/wave2.png);
+}
+
+.category-list .category {
+  background-position: top 30px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 75px auto !important;
+  padding: 120px 20px 15px;
+}
+
+.category-list .category p {
+  color: lightgray;
+}
+
+.category-list h3 {
+  color: #e03f85;
 }
